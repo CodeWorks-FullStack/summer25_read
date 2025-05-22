@@ -5,6 +5,7 @@
   --light: #EDEDED;
 
   --edge-spacing: 2.5em;
+  --magic-card-offset: 3.6em;
 }
 
 body {
@@ -51,9 +52,6 @@ main {
 
 }
 
-.shop {
-  padding-top: 1.5em;
-}
 
 
 .read-font {
@@ -77,6 +75,28 @@ input {
   accent-color: var(--theme) !important;
 }
 
-.sticky-top.offset-100{
+.sticky-top.offset-100 {
   top: 100px;
+}
+
+
+.magic-card {
+  /* transform: translateY(100px); */
+  position: relative;
+  top: var(--magic-card-offset);
+}
+
+.shop {
+  padding-top: calc(var(--magic-card-offset) * 1.5);
+}
+
+@media screen AND (max-width: 600px) {
+  :root {
+    --magic-card-offset: 0;
+  }
+
+  .magic-card{
+    margin-bottom: 1.5em;
+  }
+
 }
