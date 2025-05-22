@@ -1,17 +1,82 @@
+:root {
+  --theme: #FF9C30;
+  --accent: #FD3030;
+  --dark: #000000;
+  --light: #EDEDED;
+
+  --edge-spacing: 2.5em;
+}
+
 body {
   font-family: "Inter";
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overscroll-behavior: none;
 }
+
+/* EXAMPLE ONLY FOR AN OVERRIDE OF BOOTSTRAP */
+/* .container {
+  margin-left: var(--edge-spacing) !important;
+  margin-right: var(--edge-spacing) !important;
+  } */
+
+
+.bg-dark {
+  background-color: var(--dark) !important;
+}
+
+.bg-theme {
+  background-color: var(--theme);
+}
+
+.bg-hero {
+  background: url(./hero-bg.png);
+  /* height: 28.222vh; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
 
 
 main {
+  /* --dark: pink; */
   flex-grow: 1;
+  background-color: var(--light);
+
 }
 
+.shop {
+  padding-top: 1.5em;
+}
 
 
 .read-font {
   font-family: "Karantina";
+  letter-spacing: .25ch;
+  text-shadow: 0 0 2px black;
+}
+
+.btn-theme {
+  background-color: var(--theme);
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: .05ch;
+}
+
+.btn-theme:hover {
+  background-color: tan;
+}
+
+input {
+  accent-color: var(--theme) !important;
+}
+
+.sticky-top.offset-100{
+  top: 100px;
 }
