@@ -45,10 +45,11 @@
         <div class="col-md-8 col-lg-7 col-xl-6 m-auto">
           <div class="card magic-card">
             <div class="card-body">
-              <p>Lorem ipsum dolor sit <strong>amet consectetur</strong>  adipisicing elit. Veniam aliquam, impedit doloribus at vel
+              <p>Lorem ipsum dolor sit <strong>amet consectetur</strong> adipisicing elit. Veniam aliquam, impedit
+                doloribus at vel
                 aspernatur ipsa beatae sapiente magni nesciunt deleniti nisi fugit! Voluptas sint nostrum natus atque
                 modi adipisci?</p>
-              
+
             </div>
           </div>
         </div>
@@ -68,8 +69,10 @@
       </div>
 
       <div class="row">
-        <div class="col-md-3 d-none d-md-block ">
+        <!-- REVIEW d-none for small screen sizes, changes it to back to visible or default display type on medium and above -->
+        <div class="col-md-3 d-none d-md-block">
 
+          <!-- NOTE you can change the bootstrap theme for elements. This changes the variables for all of this elements children as well -->
           <div class="card sticky-top offset-100" data-bs-theme="dark">
             <div class="card-body">
               <form>
@@ -80,15 +83,13 @@
 
                 <input type="range" class="form-range">
                 <div>
-                  <input type="checkbox" id="action" class="form-checkbox">
-                  <label for="action">Action</label>
+                  <input type="checkbox" id="action" class="form-check-input">
+                  <label for="action" class="form-check-label">Action</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="action" class="form-checkbox">
-                  <label for="action">Action</label>
+                  <input type="checkbox" id="fantasy" class="form-check-input">
+                  <label for="fantasy" class="form-check-label">Fantasy</label>
                 </div>
-
-
               </form>
             </div>
           </div>

@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* overscroll is the pulldown to refresh effect */
   overscroll-behavior: none;
 }
 
@@ -22,7 +23,7 @@ body {
   margin-right: var(--edge-spacing) !important;
   } */
 
-
+/* NOTE Overriding bootstrap standard class */
 .bg-dark {
   background-color: var(--dark) !important;
 }
@@ -79,9 +80,8 @@ input {
   top: 100px;
 }
 
-
+/* The name of this class is not special */
 .magic-card {
-  /* transform: translateY(100px); */
   position: relative;
   top: var(--magic-card-offset);
 }
@@ -90,13 +90,19 @@ input {
   padding-top: calc(var(--magic-card-offset) * 1.5);
 }
 
+/* NOTE toggle features based on screen size */
 @media screen AND (max-width: 600px) {
   :root {
     --magic-card-offset: 0;
   }
 
-  .magic-card{
+  .magic-card {
     margin-bottom: 1.5em;
   }
 
+}
+
+/* NOTE: how to change the color of the slider */
+input::-webkit-slider-thumb {
+  background: var(--theme) !important;
 }
